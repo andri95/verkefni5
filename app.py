@@ -18,14 +18,11 @@ def form_process():
         email = request.forms.get('netfang')
         phone = request.forms.get('simi')
 
-        name = html.escape(name)
-        print(name)
-
-        nyr_notandi=[name,address,email,phone,username,password]
+        nyr_notandi=[name,address,email,phone]
         valid = True
 
         if valid:
-            return template('signup_success.tpl', name = new_user[0])
+            return template('undirsida.tpl', name = nyr_notandi[0])
         else:
             return redirect("/")
 
