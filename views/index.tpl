@@ -33,19 +33,19 @@
               </fieldset>
               <fieldset>
                 <h1>Veldu námskeið - ATH aðeins má velja eitt námskeið</h1>
-                % for x in range(namskeid_prufa):
+                % for x in range(len(namskeid_prufa), 1):
                    <input type="checkbox" id="{{namskeid_prufa[x]}}" name="namskeid" value="{{namskeid_prufa[x]}}">
                    <label for="{{namskeid_prufa[x]}}">{{namskeid_prufa[x]}}</label>
                 % end
 
                 <h1>Hvað viltu sitja námskeiðið marga daga?</h1>
-                % for x in range(fj_daga_prufa):
+                % for x in range(len(fj_daga_prufa), 1):
                    <input type="checkbox" id="{{fj_daga_prufa[x]}}" name="fj_daga" value="{{fj_daga_prufa[x]}}">
                    <label for="{{fj_daga_prufa[x]}}">{{fj_daga_prufa[x]}}</label>
                 % end
 
                 <h1>Hvaða daga viltu sitja?</h1>
-                % for x in range(dagar_prufa):
+                % for x in range(len(dagar_prufa), 1):
                    <input type="checkbox" id="{{dagar_prufa[x]}}" name="dagar" value="{{dagar_prufa[x]}}">
                    <label for="{{dagar_prufa[x]}}">{{dagar_prufa[x]}}</label>
                 % end
