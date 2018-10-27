@@ -50,7 +50,7 @@
                    <label for="{{dagar_prufa[x]}}">{{dagar_prufa[x]}}</label>
                 % end
 
-                <h1>Hvaða fyrirlestur viltu sitja hvaða dag? ATH aðeins einn fyrirlestur á dag"</h1>
+                <h1>Hvaða fyrirlestur viltu sitja hvaða dag? ATH aðeins einn fyrirlestur á dag</h1>
                 % for x in range(len(dagar_listi)):
                     <h2>{{dagar_listi[x]}}</h2>
                     % for i in range(len(namskeid_listi)):
@@ -83,6 +83,7 @@
                             % end
                         % end
                     % end
+                % end
               </fieldset>
               <fieldset>
                  <input type = "submit" name = "submit" value = "Staðfesta" />
