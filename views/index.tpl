@@ -11,7 +11,8 @@
         </div>
         <div>
            <form action="/process" method="post">
-                 <fieldset>
+
+              <fieldset>
                  <h3>Notendaupplýsingar</h3>
                  <div>
                     <label>Nafn:</label>
@@ -32,48 +33,22 @@
               </fieldset>
               <fieldset>
                 <h1>Veldu námskeið - ATH aðeins má velja eitt námskeið</h1>
-                <div>
-                   <input type="checkbox" id="python" name="namskeid" value="python">
-                   <label for="python">Python</label>
-                </div>
-                <div>
-                   <input type="checkbox" id="javascript" name="namskeid" value="jacascript">
-                   <label for="javascript">JavaScript</label>
-                </div>
-                <div>
-                   <input type="checkbox" id="gagnasofn" name="namskeid" value="gagnasofn">
-                   <label for="gagnasofn">Gagnasöfn</label>
-                </div>
-                <div>
-                   <input type="checkbox" id="winserv" name="namskeid" value="winserv">
-                   <label for="winserv">Windows Server</label>
-                </div>
+                % for x in namskeid_prufa:
+                   <input type="checkbox" id="{{namskeid_prufa[x]}}" name="namskeid" value="{{namskeid_prufa[x]}}">
+                   <label for="{{namskeid_prufa[x]}}">{{namskeid_prufa[x]}}</label>
+                % end
+
                 <h1>Hvað viltu sitja námskeiðið marga daga?</h1>
-                <div>
-                   <input type="checkbox" id="einn_dagur" name="fj_daga" value="einn_dagur">
-                   <label for="einn_dagur">Einn dag</label>
-                </div>
-                <div>
-                   <input type="checkbox" id="tveir_dagar name="fj_daga" value="tveir_dagar">
-                   <label for="tveir_dagar">Tvo daga</label>
-                </div>
-                <div>
-                   <input type="checkbox" id="thrir_dagar" name="fj_daga" value="thrir_dagar">
-                   <label for="thrir_dagar">Þrjá daga</label>
-                </div>
+                % for x in fj_daga_prufa:
+                   <input type="checkbox" id="{{fj_daga_prufa[x]}}" name="fj_daga" value="{{fj_daga_prufa[x]}}">
+                   <label for="{{fj_daga_prufa[x]}}">{{fj_daga_prufa[x]}}</label>
+                % end
+
                 <h1>Hvaða daga viltu sitja?</h1>
-                <div>
-                   <input type="checkbox" id="manudagur" name="dagar" value="manudagur">
-                   <label for="manudagur">Mánudag</label>
-                </div>
-                <div>
-                   <input type="checkbox" id="thridjudagur" name="dagar" value="thridjudagur">
-                   <label for="thridjudagur">Þriðjudag</label>
-                </div>
-                <div>
-                   <input type="checkbox" id="midvikudagur" name="dagar" value="midvikudagur">
-                   <label for="midvikudagur">Miðvikudag</label>
-                </div>
+                % for x in dagar_prufa:
+                   <input type="checkbox" id="{{dagar_prufa[x]}}" name="dagar" value="{{dagar_prufa[x]}}">
+                   <label for="{{dagar_prufa[x]}}">{{dagar_prufa[x]}}</label>
+                % end
               </fieldset>
               <fieldset>
                  <input type = "submit" name = "submit" value = "Staðfesta" />
