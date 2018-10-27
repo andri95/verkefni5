@@ -17,6 +17,9 @@ def form_process():
         address = request.forms.get('heimilisfang')
         email = request.forms.get('netfang')
         phone = request.forms.get('simi')
+        namskeid_listi = request.forms.getall('namskeid')
+        fj_daga_listi = request.forms.getall('fj_daga')
+        dagar_listi = request.forms.getall('dagar')
 
         nyr_notandi=[name,address,email,phone]
         valid = True
