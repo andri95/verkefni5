@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 
 from sys import argv
 
@@ -12,13 +10,24 @@ bottle.debug(True)
 def index():
     return template ('index.tpl')
 
-@route("/send", method="POST")
+@post('/process')
 def form_process():
-    postdata = request.body.read()
-    fornafn = request.forms.get("fornafn")
-    eftirnafn = request.forms.get("eftirnafn")
+    if request.POST.get("submit","").strip():
+        name = request.forms.get('nafn')
+        address = request.forms.get('heimilisfang')
+        email = request.forms.get('netfang')
+        phone = request.forms.get('simi')
 
-    # heppilegra að nota template
-    return template ('undirsida.tpl', postdata = postdata)
+        name = html.escape(name)
+        print(name)
+
+        nyr_notandi=[name,address,email,phone,username,password]
+        valid = True
+
+        if valid:
+            return template('signup_success.tpl', name = new_user[0])
+        else:
+            return redirect("/")
+
 
 bottle.run(host='0.0.0.0', port=argv[1])
