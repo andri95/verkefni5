@@ -51,6 +51,8 @@
                 % end
 
                 <h1>Hvaða fyrirlestur viltu sitja hvaða dag? ATH aðeins einn fyrirlestur á dag</h1>
+                % dagar_listi = request.forms.getall('dagar')
+                % namskeid_listi = request.forms.getall('namskeid')
                 % for x in range(len(dagar_listi)):
                     <h2>{{dagar_listi[x]}}</h2>
                     % for i in range(len(namskeid_listi)):
