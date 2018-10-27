@@ -49,6 +49,40 @@
                    <input type="checkbox" id="{{dagar_prufa[x]}}" name="dagar" value="{{dagar_prufa[x]}}">
                    <label for="{{dagar_prufa[x]}}">{{dagar_prufa[x]}}</label>
                 % end
+
+                <h1>Hvaða fyrirlestur viltu sitja hvaða dag? ATH aðeins einn fyrirlestur á dag"</h1>
+                % for x in range(len(dagar_listi)):
+                    <h2>{{dagar_listi[x]}}</h2>
+                    % for i in range(len(namskeid_listi)):
+
+                        % if namskeid_listi[i] == 'Python':
+                            % for x in range(len(namskeid_py)):
+                                <input type="checkbox" id="{{namskeid_py[x]}}" name="val_dagur" value="{{namskeid_py[x]}}">
+                                <label for="{{namskeid_py[x]}}">{{namskeid_py[x]}}</label>
+                            % end
+                        % end
+
+                        % if namskeid_listi[i] == 'JavaScript':
+                            % for x in range(len(namskeid_java)):
+                                <input type="checkbox" id="{{namskeid_java[x]}}" name="val_dagur" value="{{namskeid_java[x]}}">
+                                <label for="{{namskeid_java[x]}}">{{namskeid_java[x]}}</label>
+                            % end
+                        % end
+
+                        % if namskeid_listi[i] == 'Gagnasöfn':
+                            % for x in range(len(namskeid_gagn)):
+                                <input type="checkbox" id="{{namskeid_gagn[x]}}" name="val_dagur" value="{{namskeid_gagn[x]}}">
+                                <label for="{{namskeid_gagn[x]}}">{{namskeid_gagn[x]}}</label>
+                            % end
+                        % end
+
+                        % if namskeid_listi[i] == 'Windows Server':
+                            % for x in range(len(namskeid_win)):
+                                <input type="checkbox" id="{{namskeid_win[x]}}" name="val_dagur" value="{{namskeid_win[x]}}">
+                                <label for="{{namskeid_win[x]}}">{{namskeid_win[x]}}</label>
+                            % end
+                        % end
+                    % end
               </fieldset>
               <fieldset>
                  <input type = "submit" name = "submit" value = "Staðfesta" />
