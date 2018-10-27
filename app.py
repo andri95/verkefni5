@@ -10,6 +10,6 @@ bottle.debug(True)
 
 @get('/')
 def index():
-    return 'index.tpl'
+    return 'views/index.tpl'
 
 bottle.run(host='0.0.0.0', port=argv[1])
