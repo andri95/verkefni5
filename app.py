@@ -10,6 +10,6 @@ bottle.debug(True)
 
 @get('/')
 def index():
-    return "Hallo Heimur í penis og Github"
+    return 'index.tpl'
 
 bottle.run(host='0.0.0.0', port=argv[1])
