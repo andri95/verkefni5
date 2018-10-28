@@ -61,25 +61,25 @@
                 % for x in range(len(val_dagar)):
                     <h1>{{val_dagar[x]}}</h1>
                     % for x in range(len(val_nams)):
-                        % if val_nams[x] == 'Python':
+                        % if x == 'Python':
                             % for x in range(len(namskeid_py)):
                                 <input type="checkbox" id="{{namskeid_py[x]}}" name="namskeid_dagur" value="{{namskeid_py[x]}}">
                                 <label for="{{namskeid_py[x]}}">{{namskeid_py[x]}}</label>
                             % end
                         % end
-                        % elif val_nams[x] == 'JavaScript':
+                        % elif x == 'JavaScript':
                             % for x in range(len(namskeid_java)):
                                 <input type="checkbox" id="{{namskeid_java[x]}}" name="namskeid_dagur" value="{{namskeid_java[x]}}">
                                 <label for="{{namskeid_java[x]}}">{{namskeid_java[x]}}</label>
                             % end
                         % end
-                        % elif val_nams[x] == 'Gagnasöfn':
+                        % elif x == 'Gagnasöfn':
                             % for x in range(len(namskeid_gagn)):
                                 <input type="checkbox" id="{{namskeid_gagn[x]}}" name="namskeid_dagur" value="{{namskeid_gagn[x]}}">
                                 <label for="{{namskeid_gagn[x]}}">{{namskeid_gagn[x]}}</label>
                             % end
                         % end
-                        % elif val_nams[x] == 'Windows Server':
+                        % elif x == 'Windows Server':
                             % for x in range(len(namskeid_win)):
                                 <input type="checkbox" id="{{namskeid_win[x]}}" name="namskeid_dagur" value="{{namskeid_win[x]}}">
                                 <label for="{{namskeid_win[x]}}">{{namskeid_win[x]}}</label>
