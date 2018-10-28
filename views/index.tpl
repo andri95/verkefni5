@@ -51,8 +51,8 @@
                 % end
 
                 <h1>Hvaða fyrirlestur viltu sitja hvaða dag? ATH aðeins einn fyrirlestur á dag</h1>
-                val_nams = []
-                val_dagar = []
+                % val_nams = []
+                % val_dagar = []
                 % for checkbox in 'namskeid':
                     % val_nams.append(checkbox)
                 % end
