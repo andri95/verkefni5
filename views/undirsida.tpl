@@ -7,10 +7,10 @@
     <body>
     <section>
         <div>
-            <h2>Nafn: {{name}}</h2>
-            <h2>Heimilisfang: {{address}}</h2>
+            <h2>Nafn: {{nafn}}</h2>
+            <h2>Heimilisfang: {{heimilis}}</h2>
             <h2>Netfang: {{email}}</h2>
-            <h2>Sími: {{phone}}</h2>
+            <h2>Sími: {{simi}}</h2>
             <h2>Valið námskeið: {{namskeid_listi}}</h2>
             <h2>Fjöldi daga á námskeiði: {{fj_daga_listi}}</h2>
             <h2>Dagar á námsskeiði: {{dagar_listi}}</h2>

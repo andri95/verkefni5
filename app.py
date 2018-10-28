@@ -21,20 +21,19 @@ def index():
 @post('/process')
 def form_process():
     if request.POST.get("submit","").strip():
-        name = request.forms.get('nafn')
-        address = request.forms.get('heimilisfang')
+        nafn = request.forms.get('nafn')
+        heimilis = request.forms.get('heimilisfang')
         email = request.forms.get('netfang')
-        phone = request.forms.get('simi')
+        simi = request.forms.get('simi')
         namskeid_listi = request.forms.getall('namskeid')
         fj_daga_listi = request.forms.getall('fj_daga')
         dagar_listi = request.forms.getall('dagar')
         val_dagur_listi = request.forms.getall('val_dagur')
 
-        nyr_notandi=[name,address,email,phone]
         valid = True
 
         if valid:
-            return template('undirsida.tpl', name = nyr_notandi[0])
+            return template('undirsida.tpl', nafn = nafn, heimilis = heimilis, email = email, simi = simi, namskeid_listi = namskeid_listi, fj_daga_listi = fj_daga_listi, dagar_listi = dagar_listi, val_dagur_listi = val_dagur_listi)
         else:
             return redirect("/")
 
