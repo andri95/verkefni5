@@ -14,7 +14,7 @@
             <h2>Valið námskeið: {{namskeid_listi}}</h2>
             <h2>Fjöldi daga á námskeiði: {{fj_daga_listi}}</h2>
             <h2>Dagar á námsskeiði: {{dagar_listi}}</h2>
-            <h2>Fyrirlestur á hvaða degi: {{val_dagur_listi}}</h2>
+            <h2>Fyrirlestur: {{val_dagur_listi}}</h2>
         </div>
     </section>
 </body>

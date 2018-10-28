@@ -36,6 +36,8 @@ def form_process():
         else:
             return redirect("/")
 
-
+@route('/static/<filename:re:.*\.css>')
+def send_css(filename):
+    return static_file(filename, root='static')
 
 bottle.run(host='0.0.0.0', port=argv[1])
