@@ -51,41 +51,52 @@
                 % end
 
                 <h1>Hvaða fyrirlestur viltu sitja hvaða dag? ATH aðeins einn fyrirlestur á dag</h1>
-                % dagar_listi = request.forms.getall('dagar')
-                % namskeid_listi = request.forms.getall('namskeid')
-                % for x in range(len(dagar_listi)):
-                    <h2>{{dagar_listi[x]}}</h2>
-                    % for i in range(len(namskeid_listi)):
-
-                        % if namskeid_listi[i] == 'Python':
+                % for checkbox in 'namskeid':
+                    % val_nams = request.form.get(checkbox)
+                % end
+                % for checkbox in 'dagar':
+                    % val_dagar = request.form.get(checkbox)
+                % end
+                <div>
+                % for x in range(len(val_dagar)):
+                    <h1>{{val_dagar[x]}}</h1>
+                    % for x in range(len(val_nams)):
+                        % if val_nams[x] == 'Python':
                             % for x in range(len(namskeid_py)):
-                                <input type="checkbox" id="{{namskeid_py[x]}}" name="val_dagur" value="{{namskeid_py[x]}}">
+                                <input type="checkbox" id="{{namskeid_py[x]}}" name="namskeid_dagur" value="{{namskeid_py[x]}}">
                                 <label for="{{namskeid_py[x]}}">{{namskeid_py[x]}}</label>
                             % end
                         % end
-
-                        % if namskeid_listi[i] == 'JavaScript':
+                        % elif val_nams[x] == 'JavaScript':
                             % for x in range(len(namskeid_java)):
-                                <input type="checkbox" id="{{namskeid_java[x]}}" name="val_dagur" value="{{namskeid_java[x]}}">
+                                <input type="checkbox" id="{{namskeid_java[x]}}" name="namskeid_dagur" value="{{namskeid_java[x]}}">
                                 <label for="{{namskeid_java[x]}}">{{namskeid_java[x]}}</label>
                             % end
                         % end
-
-                        % if namskeid_listi[i] == 'Gagnasöfn':
+                        % elif val_nams[x] == 'Gagnasöfn':
                             % for x in range(len(namskeid_gagn)):
-                                <input type="checkbox" id="{{namskeid_gagn[x]}}" name="val_dagur" value="{{namskeid_gagn[x]}}">
+                                <input type="checkbox" id="{{namskeid_gagn[x]}}" name="namskeid_dagur" value="{{namskeid_gagn[x]}}">
                                 <label for="{{namskeid_gagn[x]}}">{{namskeid_gagn[x]}}</label>
                             % end
                         % end
-
-                        % if namskeid_listi[i] == 'Windows Server':
+                        % elif val_nams[x] == 'Windows Server':
                             % for x in range(len(namskeid_win)):
-                                <input type="checkbox" id="{{namskeid_win[x]}}" name="val_dagur" value="{{namskeid_win[x]}}">
+                                <input type="checkbox" id="{{namskeid_win[x]}}" name="namskeid_dagur" value="{{namskeid_win[x]}}">
                                 <label for="{{namskeid_win[x]}}">{{namskeid_win[x]}}</label>
                             % end
                         % end
                     % end
-                % end
+                </div>
+                <div>
+                <h2>Þriðjudagur</h2>
+                   <input type="checkbox" id="midvikudagur" name="dagar" value="midvikudagur">
+                   <label for="midvikudagur">Miðvikudag</label>
+                </div>
+                <div>
+                <h2>Miðvikudagur</h2>
+                   <input type="checkbox" id="midvikudagur" name="dagar" value="midvikudagur">
+                   <label for="midvikudagur">Miðvikudag</label>
+                </div>
               </fieldset>
               <fieldset>
                  <input type = "submit" name = "submit" value = "Staðfesta" />
