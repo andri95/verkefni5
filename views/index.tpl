@@ -51,54 +51,97 @@
                 % end
 
                 <h1>Hvaða fyrirlestur viltu sitja hvaða dag? ATH aðeins einn fyrirlestur á dag</h1>
-                % val_nams = []
-                % val_dagar = []
-                % for checkbox in namskeid_prufa:
-                    % val_nams.append(checkbox)
-                % end
-                % for checkbox in dagar_prufa:
-                    % val_dagar.append(checkbox)
-                % end
+
+                <h1>EF ÞÚ VALDIR PYTHON</h1>
                 <div>
-                % for x in range(len(val_dagar)):
-                    <h1>{{val_dagar[x]}}</h1>
-                    % for x in range(len(val_nams)):
-                        % if val_nams[x] == 'Python':
-                            % for x in range(len(namskeid_py)):
-                                <input type="checkbox" id="{{namskeid_py[x]}}" name="namskeid_dagur" value="{{namskeid_py[x]}}">
-                                <label for="{{namskeid_py[x]}}">{{namskeid_py[x]}}</label>
-                            % end
-                        % end
-                        % if val_nams[x] == 'JavaScript':
-                            % for x in range(len(namskeid_java)):
-                                <input type="checkbox" id="{{namskeid_java[x]}}" name="namskeid_dagur" value="{{namskeid_java[x]}}">
-                                <label for="{{namskeid_java[x]}}">{{namskeid_java[x]}}</label>
-                            % end
-                        % end
-                        % if val_nams[x] == 'Gagnasöfn':
-                            % for x in range(len(namskeid_gagn)):
-                                <input type="checkbox" id="{{namskeid_gagn[x]}}" name="namskeid_dagur" value="{{namskeid_gagn[x]}}">
-                                <label for="{{namskeid_gagn[x]}}">{{namskeid_gagn[x]}}</label>
-                            % end
-                        % end
-                        % if val_nams[x] == 'Windows Server':
-                            % for x in range(len(namskeid_win)):
-                                <input type="checkbox" id="{{namskeid_win[x]}}" name="namskeid_dagur" value="{{namskeid_win[x]}}">
-                                <label for="{{namskeid_win[x]}}">{{namskeid_win[x]}}</label>
-                            % end
-                        % end
+                <h2>Mánudagur</h2>
+                    % for x in range(len(namskeid_py)):
+                        <input type="checkbox" id="{{namskeid_py[x]}}" name="val_dagur" value="{{namskeid_py[x]}}">
+                        <label for="{{namskeid_py[x]}}">{{namskeid_py[x]}}</label>
                     % end
-                % end
                 </div>
                 <div>
                 <h2>Þriðjudagur</h2>
-                   <input type="checkbox" id="midvikudagur" name="dagar" value="midvikudagur">
-                   <label for="midvikudagur">Miðvikudag</label>
+                   % for x in range(len(namskeid_py)):
+                        <input type="checkbox" id="{{namskeid_py[x]}}" name="val_dagur" value="{{namskeid_py[x]}}">
+                        <label for="{{namskeid_py[x]}}">{{namskeid_py[x]}}</label>
+                   % end
                 </div>
                 <div>
                 <h2>Miðvikudagur</h2>
-                   <input type="checkbox" id="midvikudagur" name="dagar" value="midvikudagur">
-                   <label for="midvikudagur">Miðvikudag</label>
+                   % for x in range(len(namskeid_py)):
+                        <input type="checkbox" id="{{namskeid_py[x]}}" name="val_dagur" value="{{namskeid_py[x]}}">
+                        <label for="{{namskeid_py[x]}}">{{namskeid_py[x]}}</label>
+                   % end
+                </div>
+
+                <h1>EF ÞÚ VALDIR JAVASCRIPT</h1>
+                <div>
+                <h2>Mánudagur</h2>
+                    % for x in range (len(namskeid_java)):
+                        <input type="checkbox" id="{{namskeid_java[x]}}" name="val_dagur" value="{{namskeid_java[x]}}">
+                        <label for="{{namskeid_java[x]}}">{{namskeid_java[x]}}</label>
+                    % end
+                </div>
+                <div>
+                <h2>Þriðjudagur</h2>
+                   % for x in range (len(namskeid_java)):
+                        <input type="checkbox" id="{{namskeid_java[x]}}" name="val_dagur" value="{{namskeid_java[x]}}">
+                        <label for="{{namskeid_java[x]}}">{{namskeid_java[x]}}</label>
+                   % end
+                </div>
+                <div>
+                <h2>Miðvikudagur</h2>
+                   % for x in range (len(namskeid_java)):
+                        <input type="checkbox" id="{{namskeid_java[x]}}" name="val_dagur" value="{{namskeid_java[x]}}">
+                        <label for="{{namskeid_java[x]}}">{{namskeid_java[x]}}</label>
+                   % end
+                </div>
+
+                <h1>EF ÞÚ VALDIR GAGNASÖFN</h1>
+                <div>
+                <h2>Mánudagur</h2>
+                    % for x in range(len(namskeid_gagn)):
+                        <input type="checkbox" id="{{namskeid_gagn[x]}}" name="val_dagur" value="{{namskeid_gagn[x]}}">
+                        <label for="{{namskeid_gagn[x]}}">{{namskeid_gagn[x]}}</label>
+                    % end
+                </div>
+                <div>
+                <h2>Þriðjudagur</h2>
+                   % for x in range(len(namskeid_gagn)):
+                        <input type="checkbox" id="{{namskeid_gagn[x]}}" name="val_dagur" value="{{namskeid_gagn[x]}}">
+                        <label for="{{namskeid_gagn[x]}}">{{namskeid_gagn[x]}}</label>
+                   % end
+                </div>
+                <div>
+                <h2>Miðvikudagur</h2>
+                   % for x in range(len(namskeid_gagn)):
+                        <input type="checkbox" id="{{namskeid_gagn[x]}}" name="val_dagur" value="{{namskeid_gagn[x]}}">
+                        <label for="{{namskeid_gagn[x]}}">{{namskeid_gagn[x]}}</label>
+                   % end
+                </div>
+
+                <h1>EF ÞÚ VALDIR WINDOWS SERVER</h1>
+                <div>
+                <h2>Mánudagur</h2>
+                    % for x in range(len(namskeid_win)):
+                        <input type="checkbox" id="{{namskeid_win[x]}}" name="val_dagur" value="{{namskeid_win[x]}}">
+                        <label for="{{namskeid_win[x]}}">{{namskeid_win[x]}}</label>
+                    % end
+                </div>
+                <div>
+                <h2>Þriðjudagur</h2>
+                   % for x in range(len(namskeid_win)):
+                        <input type="checkbox" id="{{namskeid_win[x]}}" name="val_dagur" value="{{namskeid_win[x]}}">
+                        <label for="{{namskeid_win[x]}}">{{namskeid_win[x]}}</label>
+                   % end
+                </div>
+                <div>
+                <h2>Miðvikudagur</h2>
+                   % for x in range(len(namskeid_win)):
+                        <input type="checkbox" id="{{namskeid_win[x]}}" name="val_dagur" value="{{namskeid_win[x]}}">
+                        <label for="{{namskeid_win[x]}}">{{namskeid_win[x]}}</label>
+                   % end
                 </div>
               </fieldset>
               <fieldset>
