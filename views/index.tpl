@@ -88,6 +88,7 @@
                             % end
                         % end
                     % end
+                % end
                 </div>
                 <div>
                 <h2>Þriðjudagur</h2>
