@@ -1,0 +1,1 @@
+Náði ekki að nota checkbox upplýsingarnar sem ég þurfti til að láta þetta allt virka eins og það á að gera inni í index skjalinu. Reyndi að fikta með request.forms.get í index fallinu en það náttúrulega virkaði ekki. Reyndi líka fyrir mér á netinu með litlum árangri. Heroku virkaði allavega í þetta skiptið
