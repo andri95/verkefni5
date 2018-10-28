@@ -17,17 +17,6 @@ def index():
     namskeid_win = ['level1','level2', 'level3']
     return template ('index.tpl', namskeid_prufa = namskeid_prufa, fj_daga_prufa = fj_daga_prufa, dagar_prufa = dagar_prufa, namskeid_py = namskeid_py, namskeid_java = namskeid_java, namskeid_gagn = namskeid_gagn, namskeid_win = namskeid_win)
 
-html_escape_table = {
-    "&": "&amp;",
-    '"': "&quot;",
-    "'": "&apos;",
-    ">": "&gt;",
-    "<": "&lt;",
-}
-
-def html_escape(text):
-    return "".join(html_escape_table.get(c, c) for c in text)
-
 @post('/process')
 def form_process():
     if request.POST.get("submit","").strip():
@@ -39,8 +28,6 @@ def form_process():
         fj_daga_listi = request.forms.getall('fj_daga')
         dagar_listi = request.forms.getall('dagar')
         val_dagur_listi = request.forms.getall('val_dagur')
-        nafn = html.escape(nafn)
-        heimilis = html.escape(heimilis)
 
         valid = True
 
